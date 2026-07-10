@@ -1,0 +1,135 @@
+================================================================================
+                   ВСЕ КОМАНДЫ ДЛЯ РАБОТЫ С MICROLITEAI
+================================================================================
+
+1. ПЕРЕХОД В ПАПКУ ПРОЕКТА
+--------------------------
+cd C:\micro-lite-ai
+
+
+2. СОЗДАНИЕ ВИРТУАЛЬНОГО ОКРУЖЕНИЯ
+-----------------------------------
+python -m venv venv
+
+
+3. АКТИВАЦИЯ ВИРТУАЛЬНОГО ОКРУЖЕНИЯ
+-----------------------------------
+venv\Scripts\activate
+
+
+4. ОБНОВЛЕНИЕ PIP
+-----------------
+python -m pip install --upgrade pip
+
+
+5. УСТАНОВКА БИБЛИОТЕК
+----------------------
+pip install torch==1.13.1+cpu --index-url https://download.pytorch.org/whl/cpu
+pip install transformers==4.30.0
+pip install datasets==2.13.0
+pip install tokenizers==0.13.3
+pip install tqdm==4.68.4
+pip install numpy==1.24.4
+
+
+6. УСТАНОВКА ВСЕГО СРАЗУ (ИЗ REQUIREMENTS.TXT)
+----------------------------------------------
+pip install -r requirements.txt
+
+
+7. СОЗДАНИЕ ТОКЕНИЗАТОРА
+------------------------
+cd src
+python tokenizer.py
+
+
+8. ОБУЧЕНИЕ МОДЕЛИ
+------------------
+cd src
+python train.py
+
+
+9. ГЕНЕРАЦИЯ ТЕКСТА
+-------------------
+python generate.py
+
+
+10. ПРОВЕРКА УСТАНОВКИ БИБЛИОТЕК
+---------------------------------
+python -c "import torch; print(torch.__version__)"
+python -c "import transformers; print(transformers.__version__)"
+python -c "import datasets; print('Datasets OK')"
+
+
+11. ПОЛНЫЙ ПЕРЕЗАПУСК ПРОЕКТА (СБРОС)
+--------------------------------------
+rmdir /s venv
+rmdir /s models
+rmdir /s src\__pycache__
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+
+
+12. СОЗДАНИЕ ПАПОК ПРОЕКТА
+---------------------------
+mkdir data
+mkdir src
+mkdir models
+type nul > src\__init__.py
+
+
+13. ПРОВЕРКА ВЕРСИИ PYTHON
+--------------------------
+python --version
+
+
+14. ПРОСМОТР УСТАНОВЛЕННЫХ ПАКЕТОВ
+----------------------------------
+pip list
+
+
+15. СОЗДАНИЕ ФАЙЛОВ README, GUIDE И Т.Д.
+----------------------------------------
+type nul > README.md
+type nul > GUIDE.md
+type nul > LICENSE
+type nul > requirements.txt
+type nul > Руководство.txt
+type nul > commands.txt
+
+
+16. ЗАПУСК TELEGRAM-БОТА (ЕСЛИ БУДЕТ)
+-------------------------------------
+python telegram_bot.py
+
+
+================================================================================
+                           ДОПОЛНИТЕЛЬНЫЕ КОМАНДЫ
+================================================================================
+
+ОЧИСТКА ЭКРАНА
+--------------
+cls                (Windows)
+clear              (Mac/Linux)
+
+ВЫХОД ИЗ ВИРТУАЛЬНОГО ОКРУЖЕНИЯ
+--------------------------------
+deactivate
+
+ПЕРЕХОД В КОРНЕВУЮ ПАПКУ
+------------------------
+cd \
+
+ПЕРЕХОД НА ДИСК C
+-----------------
+C:
+
+ПРОСМОТР ФАЙЛОВ В ПАПКЕ
+-----------------------
+dir                (Windows)
+ls                 (Mac/Linux)
+
+================================================================================
+© MicroLiteAI 2026
+================================================================================
